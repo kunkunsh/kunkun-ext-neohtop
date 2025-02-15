@@ -267,7 +267,7 @@
       <h2 class="section-title">What People Are Saying</h2>
       <div class="testimonial-grid">
         <blockquote class="twitter-tweet">
-          <p lang="en" dir="ltr">Neohtop is absolutely beautiful to look at. It’s a modern system monitor inspired by
+          <p lang="en" dir="ltr">Neohtop is absolutely beautiful to look at. It's a modern system monitor inspired by
             htop, providing real-time insights into CPU, memory, disk, and network usage. A work of art! <a
               href="https://t.co/TAzCIEb8uF">pic.twitter.com/TAzCIEb8uF</a></p>&mdash; JoeyBaggaDonuts (@haxxusj) <a
             href="https://twitter.com/haxxusj/status/1854590782684250487?ref_src=twsrc%5Etfw">November 7, 2024</a>
@@ -301,7 +301,7 @@
         <blockquote class="twitter-tweet">
           <p lang="en" dir="ltr">🚀 Introducing NeoHtop, the ultimate process monitoring tool for all your system needs!
             🖥️ Say goodbye to clunky, outdated monitors and hello to a modern, native solution with a clean and
-            user-friendly interface. 🤩 With NeoHtop, you can easily keep track of your system&#39;s… <a
+            user-friendly interface. 🤩 With NeoHtop, you can easily keep track of your system's… <a
               href="https://t.co/qq8cXI8Qq1">pic.twitter.com/qq8cXI8Qq1</a></p>&mdash; Durgesh Gupta (@ilearnbydoing) <a
             href="https://twitter.com/ilearnbydoing/status/1854037593987428754?ref_src=twsrc%5Etfw">November 6, 2024</a>
         </blockquote>
@@ -347,7 +347,7 @@
 
         <blockquote class="twitter-tweet">
           <p lang="en" dir="ltr">NeoHtop offers a modern interface with additional features like process pinning, smart
-            search, and themes while maintaining high performance through its Rust backend. It&#39;s designed to be more
+            search, and themes while maintaining high performance through its Rust backend. It's designed to be more
             user-friendly and efficient than traditional system monitors.<a
               href="https://t.co/c4niSeqw0p">https://t.co/c4niSeqw0p</a> <a
               href="https://t.co/hnqrfSiSFG">pic.twitter.com/hnqrfSiSFG</a></p>&mdash; Hustle Hacker (@HustleHackerAI)
@@ -459,6 +459,169 @@
         </div>
       </div>
     </section>
+
+    <!-- App Promotion Modal -->
+    <div id="appPromoModal" class="app-promo-modal">
+      <div class="app-promo-content">
+        <button class="close-modal" onclick="closePromoModal()">×</button>
+        <div class="app-card">
+          <img
+            src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/20/7d/90/207d90bc-5431-430b-2f4c-c34eb88b79ce/AppIcon-0-0-1x_U007epad-0-85-220.png/460x0w.webp"
+            alt="Headshot Photo AI Generator Icon" />
+          <div class="app-info">
+            <h4>Try My Other App</h4>
+            <h3>Headshot Photo AI Generator</h3>
+            <p>Create stunning professional AI headshots in seconds</p>
+            <a href="https://apps.apple.com/us/app/headshot-photo-ai-generator/id6505079560" target="_blank"
+              class="app-store-button">
+              View on App Store
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .app-promo-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        backdrop-filter: blur(4px);
+      }
+
+      .app-promo-modal.show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease-out;
+      }
+
+      .app-promo-content {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 12px;
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .app-promo-content {
+          background: #1a1a1a;
+          color: #ffffff;
+        }
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: inherit;
+        padding: 0.5rem;
+        line-height: 1;
+      }
+
+      .app-card {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .app-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 16px;
+      }
+
+      .app-info h3 {
+        margin: 0.5rem 0;
+        color: inherit;
+      }
+
+      .app-info h4 {
+        margin: 0;
+        color: #666666;
+        font-weight: normal;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .app-info h4 {
+          color: #999999;
+        }
+      }
+
+      .app-info p {
+        margin: 0.5rem 0 1rem 0;
+        color: #666666;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .app-info p {
+          color: #999999;
+        }
+      }
+
+      .app-store-button {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #007AFF;
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .app-store-button:hover {
+        opacity: 0.9;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <!-- Add this to your main.js file or before </body> -->
+    <script>
+      // Remove duplicate setTimeout
+      function showPromoModal() {
+        const modal = document.getElementById('appPromoModal');
+        modal.classList.add('show');
+      }
+
+      function closePromoModal() {
+        const modal = document.getElementById('appPromoModal');
+        modal.classList.remove('show');
+        // Set cookie to prevent showing again for 7 days
+        document.cookie = "appPromoShown=true;max-age=604800;path=/";
+      }
+
+      // Check if modal was already shown
+      function shouldShowModal() {
+        return !document.cookie.includes('appPromoShown=true');
+      }
+
+      // Only show modal if it hasn't been shown before
+      if (shouldShowModal()) {
+        setTimeout(showPromoModal, 8000);
+      }
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-88HFXRBNLS"></script>
