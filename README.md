@@ -18,6 +18,11 @@
   </picture>
 </div>
 
+<div align="center">
+  <p>If you find this project helpful, consider buying me a coffee:</p>
+  <a href="https://www.buymeacoffee.com/abdenasser" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+</div>
+
 ## Table of Contents
 - [Why NeoHtop?](#why-neohtop)
 - [Features](#features)
@@ -31,7 +36,6 @@
   - [Code Formatting](#code-formatting)
   - [Pull Requests](#pull-requests)
 - [Contributing](#contributing)
-- [Support](#support)
 - [License](#license)
 
 ## Why NeoHtop?
@@ -110,11 +114,6 @@ Before submitting a PR, ensure:
 
 ## Contributing
 We welcome contributions! Please see our [contributing guidelines](./.github/CONTRIBUTING.md) for more information.
-
-## Support
-If you find this project helpful, consider buying me a coffee:
-
-<a href="https://www.buymeacoffee.com/abdenasser" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
