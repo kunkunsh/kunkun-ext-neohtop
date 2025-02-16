@@ -1,10 +1,3 @@
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="screenshot.png">
-    <source media="(prefers-color-scheme: light)" srcset="screenshot-light.png">
-    <img alt="NeoHtop Screenshot" src="./screenshot.png" width="800">
-  </picture>
-</div>
 
 <div align="center">
   <img src="app-icon.png" alt="NeoHtop Logo" width="120" />
@@ -19,8 +12,19 @@
 </div>
 
 <div align="center">
+  <picture>
+    <!-- <source media="(prefers-color-scheme: dark)" srcset="screenshot.png">
+    <source media="(prefers-color-scheme: light)" srcset="screenshot-light.png"> -->
+    <img alt="NeoHtop Screenshot" src="./screenshot.png" width="800">
+  </picture>
+</div>
+
+<div align="center">
   <p>If you find this project helpful, consider buying me a coffee:</p>
   <a href="https://www.buymeacoffee.com/abdenasser" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+  <p>Or sponsor me on GitHub:</p>
+  <a href="https://github.com/sponsors/Abdenasser" target="_blank"><img src="https://img.shields.io/badge/Sponsor-abdenasser-white?style=flat&logo=github&logoColor=pink" alt="Sponsor @abdenasser" style="height: auto !important;width: 217px !important;"></a>
+
 </div>
 
 ## Table of Contents
