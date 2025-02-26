@@ -5,6 +5,10 @@ on:
     branches: [ main ]
     paths:
       - 'src-tauri/**'
+  push:
+    branches: [ main ]
+    paths:
+      - 'src-tauri/**'
 
 env:
   CARGO_TERM_COLOR: always
