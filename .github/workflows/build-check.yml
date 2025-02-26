@@ -36,7 +36,7 @@ jobs:
           path: |
             /var/cache/apt/archives/*.deb
             /var/lib/apt/lists/*
-          key: ${{ runner.os }}-apt-${{ hashFiles('**/build-check.yml') }}
+          key: ${{ runner.os }}-apt-${{ hashFiles('**/package.json', '**/Cargo.lock') }}
           restore-keys: |
             ${{ runner.os }}-apt-
 
