@@ -1,0 +1,35 @@
+name: NPM Package Publish
+
+on:
+  push:
+    branches: [kunkun-ext]
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+          registry-url: "https://registry.npmjs.org"
+      - run: npm install
+      - run: npm run build
+      - name: Check if version is already published
+        run: |
+          PACKAGE_VERSION=$(jq -r '.version' package.json)
+          PACKAGE_NAME=$(jq -r '.name' package.json)
+          npm view $PACKAGE_NAME@$PACKAGE_VERSION
+        continue-on-error: true
+        id: check_version
+      - name: Publish
+        if: steps.check_version.outcome != 'success'
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
