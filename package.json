@@ -13,7 +13,7 @@
       "https://i.imgur.com/z2XWAPi.jpeg"
     ],
     "permissions": [
-      "system-info:process"
+      "system-info:all"
     ],
     "icon": {
       "type": "remote-url",
@@ -44,6 +44,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@kksh/api": "^0.1.6",
     "@tauri-apps/api": "^2.0.3",
     "@tauri-apps/plugin-os": "^2.0.0",
     "@tauri-apps/plugin-shell": "^2.0.1",

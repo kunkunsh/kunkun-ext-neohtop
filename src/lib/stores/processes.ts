@@ -1,6 +1,9 @@
 import { writable, derived } from "svelte/store";
 import type { Process, SystemStats } from "$lib/types";
 import { invoke } from "@tauri-apps/api/core";
+import { sysInfo } from "@kksh/api/ui/custom";
+import { processMonitor } from "$lib/utils/processMonitor";
+import { systemMonitor } from "$lib/utils/systemMonitor";
 
 interface ProcessStore {
   processes: Process[];
@@ -53,18 +56,21 @@ function createProcessStore() {
 
   const getProcesses = async () => {
     try {
-      const result = await invoke<[Process[], SystemStats]>("get_processes");
+      // const result = await invoke<[Process[], SystemStats]>("get_processes");
+      const processes = await processMonitor.collectProcesses();
+      const systemStats = await systemMonitor.collectStats();
+      await sysInfo.refreshAll();
       update((state) => {
         let updatedSelectedProcess = state.selectedProcess;
         if (state.selectedProcessPid) {
           updatedSelectedProcess =
-            result[0].find((p) => p.pid === state.selectedProcessPid) || null;
+            processes.find((p) => p.pid === state.selectedProcessPid) || null;
         }
 
         return {
           ...state,
-          processes: result[0],
-          systemStats: result[1],
+          processes,
+          systemStats,
           error: null,
           selectedProcess: updatedSelectedProcess,
         };

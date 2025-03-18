@@ -7,21 +7,19 @@
     faChevronDown,
     faChevronRight,
   } from "@fortawesome/free-solid-svg-icons";
-  import { platform } from "@tauri-apps/plugin-os";
+  // import { platform } from "@tauri-apps/plugin-os";
   import { THEME_GROUPS } from "$lib/constants";
 
   let showMenu = false;
 
   const themeGroups = [
     ...THEME_GROUPS,
-    ...(platform() === "windows" || platform() === "macos"
-      ? [
-          {
-            label: "Glassy",
-            themes: ["glassy"],
-          },
-        ]
-      : []),
+    ...[
+      {
+        label: "Glassy",
+        themes: ["glassy"],
+      },
+    ],
   ];
 </script>
 

@@ -1,12 +1,14 @@
 <script lang="ts">
-  import { getVersion } from "@tauri-apps/api/app";
+  // import { getVersion } from "@tauri-apps/api/app";
+  // import { version } from "../../../package.json";
   import { onMount } from "svelte";
   import { ThemeSwitcher } from "$lib/components";
   import { faInfo } from "@fortawesome/free-solid-svg-icons";
   import Fa from "svelte-fa";
   import { ASCII_ART, APP_INFO } from "$lib/constants";
 
-  let version = "";
+  // @ts-ignore
+  let version = __APP_VERSION__;
   let latestVersion = "";
   let showInfo = false;
   let hasUpdate = false;
@@ -48,11 +50,11 @@
 
   onMount(async () => {
     try {
-      version = await getVersion();
-      await checkLatestVersion();
+      // version = await getVersion();
+      // await checkLatestVersion();
     } catch (error) {
-      console.error("Failed to initialize version info:", error);
-      version = "";
+      // console.error("Failed to initialize version info:", error);
+      // version = "";
     }
   });
 </script>

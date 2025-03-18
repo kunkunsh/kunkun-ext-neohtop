@@ -29,7 +29,7 @@
     sortConfig,
   } = $processStore);
 
-  let intervalId: number;
+  let intervalId: number | NodeJS.Timeout;
 
   $: columns = column_definitions.map((col) => ({
     ...col,
