@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="title-bar" data-tauri-drag-region>
+<div class="title-bar" data-tauri-drag-region data-kunkun-drag-region>
   <div class="title">
     <img src="/32x32.png" alt="NeoHtop" class="app-icon" />
     <div class="neon">NeoHtop</div>

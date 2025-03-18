@@ -11,6 +11,7 @@
   import { themeStore, settingsStore, processStore } from "$lib/stores/index";
   import { column_definitions } from "$lib/definitions/columns";
   import { filterProcesses, sortProcesses } from "$lib/utils";
+  import { ui } from "@kksh/api/ui/custom";
 
   $: ({
     processes,
@@ -71,6 +72,8 @@
   }
 
   onMount(async () => {
+    ui.showBackButton("bottom-right");
+    ui.registerDragRegion();
     try {
       await processStore.getProcesses();
     } catch (error) {
