@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/kunkunsh/kunkun-ext-neohtop.git"
   },
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "",
   "type": "module",
   "kunkun": {
@@ -14,7 +14,7 @@
     "longDescription": "A modern, cross-platform system monitor",
     "identifier": "neohtop",
     "demoImages": [
-      "https://i.imgur.com/z2XWAPi.jpeg"
+      "https://imgur.com/D8VHDEz.png"
     ],
     "permissions": [
       "system-info:all"
