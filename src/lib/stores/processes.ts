@@ -4,6 +4,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { sysInfo } from "@kksh/api/ui/custom";
 import { processMonitor } from "$lib/utils/processMonitor";
 import { systemMonitor } from "$lib/utils/systemMonitor";
+import { shell } from "@kksh/api/ui/custom";
 
 interface ProcessStore {
   processes: Process[];
@@ -86,7 +87,8 @@ function createProcessStore() {
   const killProcess = async (pid: number) => {
     try {
       update((state) => ({ ...state, isKilling: true }));
-      const success = await invoke<boolean>("kill_process", { pid });
+      // const success = await invoke<boolean>("kill_process", { pid });
+      const success = await shell.killPid(pid).then(() => true);
       if (success) {
         await getProcesses();
       } else {
